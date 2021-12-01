@@ -21,21 +21,24 @@ fn part1(input: &Vec<u16>) {
     );
 }
 
-fn of_index(input: &Vec<u16>, index: usize) -> u16 {
-    if index > input.len() - 3 {
-        0
-    } else {
-        input[index] + input[index + 1] + input[index + 2]
-    }
-}
-
 fn part2(input: &Vec<u16>) {
+    let processed: Vec<u16> = input
+        .iter()
+        .enumerate()
+        .map(|(index, num)| {
+            if index > input.len() - 3 {
+                0
+            } else {
+                num + input[index + 1] + input[index + 2]
+            }
+        })
+        .collect();
     println!(
         "{}",
-        input
+        processed
             .iter()
             .enumerate()
-            .filter(|(index, _)| index != &0 && of_index(input, *index) > of_index(input, index - &1))
+            .filter(|(index, num)| index != &0 && num > &&processed[index - 1])
             .count()
     );
 }

@@ -3,6 +3,7 @@ use std::time;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 fn main() {
     let start = time::Instant::now();
@@ -10,6 +11,7 @@ fn main() {
     day1::run();
     day2::run();
     day3::run();
+    day4::run();
 
     println!("--------------\nExecution took {:?}", start.elapsed());
 }

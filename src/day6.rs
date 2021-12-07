@@ -1,8 +1,6 @@
 pub fn run() {
     println!("--- DAY 06 ---");
     let input: Vec<u8> = include_str!("resources/input06.txt")
-        // "3,4,3,1,2"
-        // "8,3"
         .split(',')
         .map(|it| it.parse::<u8>().unwrap())
         .collect();

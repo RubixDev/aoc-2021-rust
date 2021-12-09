@@ -8,6 +8,7 @@ mod day5;
 mod day6;
 mod day7;
 mod day8;
+mod day9;
 
 fn main() {
     let start = time::Instant::now();
@@ -20,6 +21,7 @@ fn main() {
     day6::run();
     day7::run();
     day8::run();
+    day9::run();
 
     println!("--------------\nExecution took {:?}", start.elapsed());
 }

@@ -49,7 +49,6 @@ fn calculate_step(octopi: &mut Vec<Vec<u8>>) -> u16 {
     for (x, y) in flashed {
         octopi[y][x] = 0;
     }
-    for line in octopi.iter() { println!("{:?}", line); } println!();
     return flashes as u16;
 }
 
